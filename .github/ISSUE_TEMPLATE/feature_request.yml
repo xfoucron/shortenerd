@@ -1,0 +1,28 @@
+---
+
+name: Feature Request
+description: Propose a new feature for Shortenerd
+labels: ["feature", "triage"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Feature summary
+      placeholder: Add custom expiration rules for short links
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem it solves
+      description: What pain point does this address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
