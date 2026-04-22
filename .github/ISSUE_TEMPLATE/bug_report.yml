@@ -1,0 +1,53 @@
+---
+
+name: Bug Report
+description: Report a reproducible bug in Shortenerd
+labels: ["bug", "triage"]
+body:
+  - type: dropdown
+    id: browser
+    attributes:
+      label: What browser are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Other
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Short description of the issue
+      placeholder: "Redirect endpoint returns 500 error"
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce it?
+      placeholder: |
+        1. Create a short link
+        2. Open redirect URL
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs & errors
+      render: shell
